@@ -1,5 +1,5 @@
 #Base Environment
-FROM anapsix/alpine-java:jdk8a
+FROM anapsix/alpine-java:8_jdk
 
 #Declare variable
 ENV package_name fastqc_v0.11.5.zip
