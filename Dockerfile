@@ -4,6 +4,8 @@ RUN mkdir -p /opt/tools
 
 WORKDIR /opt/tools
 
+COPY rgFastQC 
+
 # install fastqc
 RUN \
   wget -c http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip && \
