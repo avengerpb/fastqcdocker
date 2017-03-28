@@ -4,7 +4,7 @@ RUN mkdir -p /opt/tools
 
 WORKDIR /opt/tools
 
-COPY rgFastQC /
+COPY rgFastQC.py /
 
 # install fastqc
 RUN \
