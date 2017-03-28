@@ -12,4 +12,6 @@ RUN cd /opt/ && unzip /tmp/${package_name} \
     && apk add perl \
     && chmod 750 /opt/FastQC/fastqc
 
+
+ CMD ["-help"]
 ENTRYPOINT ["/opt/FastQC/fastqc"]
