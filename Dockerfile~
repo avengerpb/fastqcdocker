@@ -1,7 +1,7 @@
 # Set the base image to Ubuntu
 FROM ubuntu:14.04
-
-RUN apt-get install -y wget
+RUN add-apt-repository -y ppa:mercurial-ppa/releases
+RUN apt-get update
 RUN apt-get install -y mercurial
 
 

@@ -1,7 +1,6 @@
 # Set the base image to Ubuntu
 FROM ubuntu:14.04
-
-RUN apt-get install -y mercurial
+RUN apt-get update
 
 
 # Install OpenJDK 7 JRE
