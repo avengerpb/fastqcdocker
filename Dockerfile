@@ -1,13 +1,24 @@
-FROM gawbul/docker-ubuntu1604-base
+# Set the base image to Ubuntu
+FROM ubuntu:14.04
 
-RUN mkdir -p /opt/tools
+# Install OpenJDK 7 JRE
+RUN apt-get update && apt-get install --yes \
+    openjdk-7-jre \
+    perl \
+    unzip
 
-WORKDIR /opt/tools
+RUN mkdir /tmp/fastqc
+WORKDIR /tmp/fastqc
 
-# install fastqc
-RUN \
-  wget -c http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip && \
-  unzip fastqc_v0.11.5.zip && \
-  cd FastQC && \
-  chmod +x fastqc && \
-  cp fastqc /usr/local/bin \
+# Download FastQC
+ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip 
+RUN unzip fastqc_v0.10.1.zip
+RUN cp FastQC/fastqc /usr/bin/fastqc_unknown
+
+
+RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/fastqc fastqc_deps
+RUN cp fastqc_deps/rgFastQC.py /usr/bin/rgFastQC.py
+RUN chmod a+x /usr/bin/rgFastQC.py
+
+RUN apt-get clean && rm -rf /tmp/fastqc && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
