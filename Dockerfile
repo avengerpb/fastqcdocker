@@ -1,5 +1,6 @@
 
-FROM ubuntu
+FROM ubuntu:15.04
+FROM openjdk-7-jre
 
 # File Author / Maintainer
 MAINTAINER conrad stoerker
@@ -17,8 +18,6 @@ VOLUME /fastqc/data
 # Update the repository sources list
 RUN apt-get update
 
-# Install tools
-RUN apt-get install --yes openjdk-7-jre-headless unzip
 
 # Download the start.sh file
 
