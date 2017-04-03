@@ -12,7 +12,7 @@ WORKDIR /tmp/fastqc
 
 # Download FastQC
 ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/fastqc
-RUN unzip fastqc_v0.10.1.zip
+RUN unzip fastqc_v0.11.5.zip
 RUN cp FastQC/fastqc /usr/bin/fastqc_unknown
 
 
