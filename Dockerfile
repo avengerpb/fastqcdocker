@@ -1,7 +1,6 @@
 # Set the base image to Ubuntu
 FROM ubuntu:14.04
 
-RUN apt-get install -y wget
 RUN apt-get install -y mercurial
 
 
