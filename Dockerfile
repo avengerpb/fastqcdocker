@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install --yes \
     perl \
     unzip
 
+RUN apt-get install python3.6
 # Download the start.sh file
 
 # Download and Install FastQC
