@@ -33,8 +33,10 @@ RUN ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc
 #Removing the tmp file
 
 
-COPY rgFastQC.py /usr/bin/rgFastQC.py
-RUN chmod a+x /usr/bin/rgFastQC.py
+COPY fastqc.py /usr/bin/fastqc.py
+RUN chmod a+x /usr/bin/fastqc.py
+
+
 
 
 
