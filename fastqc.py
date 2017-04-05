@@ -158,8 +158,8 @@ if __name__ == '__main__':
     assert opts.input is not None
     assert opts.inputfilename is not None
     assert opts.htmloutput is not None
-    if not os.path.exists(opts.outputdir):
-        os.makedirs(opts.outputdir)
+    if not os.path.exists('/tmp'):
+        os.makedirs('/tmp/ouputs')
 
     fastqc_runner = FastQCRunner(opts)
     fastqc_runner.run_fastqc()
