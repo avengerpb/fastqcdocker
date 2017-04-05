@@ -147,7 +147,7 @@ if __name__ == '__main__':
     op.add_option('-j', '--inputfilename', default=None)
     op.add_option('-o', '--htmloutput', default=None)
     op.add_option('-t', '--textoutput', default=None)
-    op.add_option('-d', '--outputdir', default="/tmp/shortread")
+    op.add_option('-d', '--outputdir', default="/tmp")
     op.add_option('-f', '--informat', default='fastq')
     op.add_option('-n', '--namejob', default='rgFastQC')
     op.add_option('-c', '--contaminants', default=None)
