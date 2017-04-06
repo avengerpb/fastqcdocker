@@ -29,7 +29,7 @@ RUN apt-get install python
 ADD ${FASTQC_PATH}/${FASTQC_ZIP} /tmp/
 RUN cd /usr/local ; unzip /tmp/${FASTQC_ZIP}
 RUN chmod 755 /usr/local/FastQC/fastqc
-RUN ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc
+RUN cp /usr/local/FastQC/fastqc /usr/local/bin/fastqc
 
 #Removing the tmp file
 
