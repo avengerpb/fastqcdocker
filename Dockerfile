@@ -36,7 +36,7 @@ RUN ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc
 
 COPY fastqc.py /tmp
 RUN ln -s /tmp/fastqc.py /usr/bin
-RUN chmod a+x /tmp/fastqc/py
+RUN chmod a+x /tmp/fastqc.py
 
 
 
